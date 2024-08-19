@@ -1,0 +1,31 @@
+<settings>
+<profiles>
+  <profile>
+    <id>cloud9-cloud9repo</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>cloud9-cloud9repo</id>
+        <url>https://cloud9-590183774489.d.codeartifact.us-east-1.amazonaws.com/maven/cloud9repo/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<servers>
+  <server>
+    <id>cloud9-cloud9repo</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<mirrors>
+  <mirror>
+    <id>cloud9-cloud9repo</id>
+    <name>cloud9-cloud9repo</name>
+    <url>https://cloud9-590183774489.d.codeartifact.us-east-1.amazonaws.com/maven/cloud9repo/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
